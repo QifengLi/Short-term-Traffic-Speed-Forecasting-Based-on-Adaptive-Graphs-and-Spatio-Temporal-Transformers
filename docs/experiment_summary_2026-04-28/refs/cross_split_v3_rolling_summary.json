@@ -1,0 +1,112 @@
+{
+  "per_split": [
+    {
+      "dataset": "metr_la",
+      "split": "s1",
+      "agstt_mae": 5.140191078186035,
+      "dcrnn_mae": 5.080355167388916,
+      "delta_agstt_minus_dcrnn": 0.05983591079711914,
+      "better_model": "dcrnn"
+    },
+    {
+      "dataset": "metr_la",
+      "split": "s2",
+      "agstt_mae": 4.588954925537109,
+      "dcrnn_mae": 4.63016414642334,
+      "delta_agstt_minus_dcrnn": -0.04120922088623047,
+      "better_model": "agstt"
+    },
+    {
+      "dataset": "metr_la",
+      "split": "s3",
+      "agstt_mae": 4.579782962799072,
+      "dcrnn_mae": 4.489026069641113,
+      "delta_agstt_minus_dcrnn": 0.09075689315795898,
+      "better_model": "dcrnn"
+    },
+    {
+      "dataset": "pemsd7_228",
+      "split": "s1",
+      "agstt_mae": 3.6417417526245117,
+      "dcrnn_mae": 3.676508665084839,
+      "delta_agstt_minus_dcrnn": -0.03476691246032715,
+      "better_model": "agstt"
+    },
+    {
+      "dataset": "pemsd7_228",
+      "split": "s2",
+      "agstt_mae": 3.3196334838867188,
+      "dcrnn_mae": 3.364511728286743,
+      "delta_agstt_minus_dcrnn": -0.044878244400024414,
+      "better_model": "agstt"
+    },
+    {
+      "dataset": "pemsd7_228",
+      "split": "s3",
+      "agstt_mae": 6.626040458679199,
+      "dcrnn_mae": 5.270542144775391,
+      "delta_agstt_minus_dcrnn": 1.3554983139038086,
+      "better_model": "dcrnn"
+    }
+  ],
+  "aggregated": [
+    {
+      "dataset": "metr_la",
+      "model": "dcrnn",
+      "n_splits": 3,
+      "mae_mean": 4.733181794484456,
+      "mae_median": 4.63016414642334,
+      "mae_std": 0.2521600051816844,
+      "mae_best": 4.489026069641113,
+      "mae_worst": 5.080355167388916
+    },
+    {
+      "dataset": "metr_la",
+      "model": "agstt",
+      "n_splits": 3,
+      "mae_mean": 4.769642988840739,
+      "mae_median": 4.588954925537109,
+      "mae_std": 0.2620438209068656,
+      "mae_best": 4.579782962799072,
+      "mae_worst": 5.140191078186035
+    },
+    {
+      "dataset": "pemsd7_228",
+      "model": "dcrnn",
+      "n_splits": 3,
+      "mae_mean": 4.103854179382324,
+      "mae_median": 3.676508665084839,
+      "mae_std": 0.8347479174727376,
+      "mae_best": 3.364511728286743,
+      "mae_worst": 5.270542144775391
+    },
+    {
+      "dataset": "pemsd7_228",
+      "model": "agstt",
+      "n_splits": 3,
+      "mae_mean": 4.529138565063477,
+      "mae_median": 3.6417417526245117,
+      "mae_std": 1.4885533464372307,
+      "mae_best": 3.3196334838867188,
+      "mae_worst": 6.626040458679199
+    }
+  ],
+  "head_to_head": [
+    {
+      "dataset": "metr_la",
+      "n_splits": 3,
+      "agstt_win_count": 1,
+      "dcrnn_win_count": 2,
+      "tie_count": 0,
+      "mean_delta_agstt_minus_dcrnn": 0.036461194356282554
+    },
+    {
+      "dataset": "pemsd7_228",
+      "n_splits": 3,
+      "agstt_win_count": 2,
+      "dcrnn_win_count": 1,
+      "tie_count": 0,
+      "mean_delta_agstt_minus_dcrnn": 0.42528438568115234
+    }
+  ]
+}

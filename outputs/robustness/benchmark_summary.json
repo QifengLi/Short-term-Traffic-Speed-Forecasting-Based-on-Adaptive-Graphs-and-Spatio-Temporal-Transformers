@@ -1,0 +1,74 @@
+[
+  {
+    "config": "configs\\seed_sweeps\\pemsd7_dcrnn_baseline_seed123.yaml",
+    "run_name": "pemsd7_dcrnn_baseline_seed123",
+    "model": "dcrnn",
+    "mae": 3.6118507385253906,
+    "rmse": 7.067722320556641,
+    "mape_percent": 8.978353500366211,
+    "metrics_path": "outputs\\robustness\\pemsd7_228_pemsd7_dcrnn_baseline_seed123_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\pemsd7_agstt_seed2026.yaml",
+    "run_name": "pemsd7_agstt_full_seed2026",
+    "model": "agstt",
+    "mae": 3.6183884143829346,
+    "rmse": 6.859702110290527,
+    "mape_percent": 9.283275604248047,
+    "metrics_path": "outputs\\robustness\\pemsd7_228_pemsd7_agstt_full_seed2026_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\pemsd7_dcrnn_baseline_seed2026.yaml",
+    "run_name": "pemsd7_dcrnn_baseline_seed2026",
+    "model": "dcrnn",
+    "mae": 3.6225507259368896,
+    "rmse": 7.033448696136475,
+    "mape_percent": 9.234089851379395,
+    "metrics_path": "outputs\\robustness\\pemsd7_228_pemsd7_dcrnn_baseline_seed2026_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\pemsd7_agstt_seed123.yaml",
+    "run_name": "pemsd7_agstt_full_seed123",
+    "model": "agstt",
+    "mae": 3.6230735778808594,
+    "rmse": 6.836650371551514,
+    "mape_percent": 9.20963191986084,
+    "metrics_path": "outputs\\robustness\\pemsd7_228_pemsd7_agstt_full_seed123_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\metr_la_agstt_seed123.yaml",
+    "run_name": "metr_la_agstt_full_seed123",
+    "model": "agstt",
+    "mae": 4.265625953674316,
+    "rmse": 8.770339012145996,
+    "mape_percent": 12.086092948913574,
+    "metrics_path": "outputs\\robustness\\metr_la_metr_la_agstt_full_seed123_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\metr_la_dcrnn_baseline_seed123.yaml",
+    "run_name": "metr_la_dcrnn_baseline_seed123",
+    "model": "dcrnn",
+    "mae": 4.350410461425781,
+    "rmse": 8.972049713134766,
+    "mape_percent": 11.913000106811523,
+    "metrics_path": "outputs\\robustness\\metr_la_metr_la_dcrnn_baseline_seed123_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\metr_la_dcrnn_baseline_seed2026.yaml",
+    "run_name": "metr_la_dcrnn_baseline_seed2026",
+    "model": "dcrnn",
+    "mae": 4.362159252166748,
+    "rmse": 8.966666221618652,
+    "mape_percent": 12.026491165161133,
+    "metrics_path": "outputs\\robustness\\metr_la_metr_la_dcrnn_baseline_seed2026_metrics.json"
+  },
+  {
+    "config": "configs\\seed_sweeps\\metr_la_agstt_seed2026.yaml",
+    "run_name": "metr_la_agstt_full_seed2026",
+    "model": "agstt",
+    "mae": 4.445003509521484,
+    "rmse": 9.040152549743652,
+    "mape_percent": 12.531824111938477,
+    "metrics_path": "outputs\\robustness\\metr_la_metr_la_agstt_full_seed2026_metrics.json"
+  }
+]

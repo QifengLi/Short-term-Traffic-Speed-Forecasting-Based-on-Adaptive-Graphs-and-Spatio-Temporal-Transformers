@@ -1,0 +1,38 @@
+[
+  {
+    "config": "configs\\cross_split\\pemsd7_agstt_cross_split_s1.yaml",
+    "run_name": "pemsd7_agstt_cross_split_s1",
+    "model": "agstt",
+    "mae": 3.621067762374878,
+    "rmse": 6.987359523773193,
+    "mape_percent": 9.728105545043945,
+    "metrics_path": "outputs\\cross_split\\pemsd7_agstt_cross_split_s1_metrics.json"
+  },
+  {
+    "config": "configs\\cross_split\\pemsd7_dcrnn_cross_split_s1.yaml",
+    "run_name": "pemsd7_dcrnn_cross_split_s1",
+    "model": "dcrnn",
+    "mae": 3.676508665084839,
+    "rmse": 7.21737813949585,
+    "mape_percent": 9.657818794250488,
+    "metrics_path": "outputs\\cross_split\\pemsd7_dcrnn_cross_split_s1_metrics.json"
+  },
+  {
+    "config": "configs\\cross_split\\metr_la_dcrnn_cross_split_s1.yaml",
+    "run_name": "metr_la_dcrnn_cross_split_s1",
+    "model": "dcrnn",
+    "mae": 5.080355167388916,
+    "rmse": 11.034643173217773,
+    "mape_percent": 13.918632507324219,
+    "metrics_path": "outputs\\cross_split\\metr_la_dcrnn_cross_split_s1_metrics.json"
+  },
+  {
+    "config": "configs\\cross_split\\metr_la_agstt_cross_split_s1.yaml",
+    "run_name": "metr_la_agstt_cross_split_s1",
+    "model": "agstt",
+    "mae": 5.270813941955566,
+    "rmse": 11.179208755493164,
+    "mape_percent": 14.782817840576172,
+    "metrics_path": "outputs\\cross_split\\metr_la_agstt_cross_split_s1_metrics.json"
+  }
+]

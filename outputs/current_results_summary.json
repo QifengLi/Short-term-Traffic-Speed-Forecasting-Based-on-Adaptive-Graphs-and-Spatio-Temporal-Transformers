@@ -1,0 +1,1027 @@
+{
+  "report_date": "2026-04-27",
+  "project_title": "Short-term Traffic Flow Forecasting Based on Adaptive Graphs and Spatio-Temporal Transformers",
+  "completion_status": {
+    "real_datasets_connected": true,
+    "strong_baselines_completed": true,
+    "statistical_significance_completed": true,
+    "visualizations_completed": true,
+    "report_and_defense_materials_updated": true,
+    "fair_budget_completed": true,
+    "fusion_optimization_completed": true,
+    "robustness_n5_completed": true,
+    "robustness_v3_n5_completed": true,
+    "cross_split_v3_completed": true,
+    "cross_split_rolling_completed": true,
+    "seed_level_significance_v3_completed": true,
+    "all_pending_items_closed": true
+  },
+  "datasets": {
+    "pemsd7_228": {
+      "data_shape": [
+        12672,
+        228,
+        1
+      ],
+      "data_min": 3.0,
+      "data_max": 82.5999984741211,
+      "data_mean": 58.889217376708984,
+      "data_std": 13.483268737792969,
+      "adj_shape": [
+        228,
+        228
+      ],
+      "adj_nonzero": 18620,
+      "adj_density": 0.358187134502924,
+      "benchmark": [
+        {
+          "config": "configs\\pemsd7_dcrnn_baseline.yaml",
+          "run_name": "pemsd7_dcrnn_baseline",
+          "model": "dcrnn",
+          "mae": 3.589770555496216,
+          "rmse": 7.030478477478027,
+          "mape_percent": 8.992817878723145,
+          "metrics_path": "outputs\\pemsd7_dcrnn_metrics.json"
+        },
+        {
+          "config": "configs\\pemsd7_agstt.yaml",
+          "run_name": "pemsd7_agstt_full",
+          "model": "agstt",
+          "mae": 3.600691080093384,
+          "rmse": 6.831973075866699,
+          "mape_percent": 9.340376853942871,
+          "metrics_path": "outputs\\pemsd7_agstt_metrics.json"
+        },
+        {
+          "config": "configs\\pemsd7_lstm_baseline.yaml",
+          "run_name": "pemsd7_lstm_baseline",
+          "model": "lstm",
+          "mae": 3.7109534740448,
+          "rmse": 7.400668144226074,
+          "mape_percent": 9.246413230895996,
+          "metrics_path": "outputs\\pemsd7_lstm_metrics.json"
+        },
+        {
+          "config": "configs\\pemsd7_stgcn_baseline.yaml",
+          "run_name": "pemsd7_stgcn_baseline",
+          "model": "stgcn",
+          "mae": 4.088315010070801,
+          "rmse": 7.385282039642334,
+          "mape_percent": 11.527727127075195,
+          "metrics_path": "outputs\\pemsd7_stgcn_metrics.json"
+        },
+        {
+          "config": "configs\\pemsd7_linear_baseline.yaml",
+          "run_name": "pemsd7_linear_baseline",
+          "model": "linear",
+          "mae": 4.316738605499268,
+          "rmse": 8.167182922363281,
+          "mape_percent": 11.262711524963379,
+          "metrics_path": "outputs\\pemsd7_linear_metrics.json"
+        }
+      ],
+      "significance_vs_agstt": [
+        {
+          "reference": "outputs\\pemsd7_agstt_predictions.npz",
+          "challenger": "outputs\\pemsd7_dcrnn_predictions.npz",
+          "null_val": null,
+          "n_valid_points": 2145024,
+          "mean_error_diff_ref_minus_challenger": 0.010920639256437121,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            0.008309906729295723,
+            0.013672517433358853
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "challenger better"
+        },
+        {
+          "reference": "outputs\\pemsd7_agstt_predictions.npz",
+          "challenger": "outputs\\pemsd7_lstm_predictions.npz",
+          "null_val": null,
+          "n_valid_points": 2145024,
+          "mean_error_diff_ref_minus_challenger": -0.11026274622009512,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            -0.11356974275610866,
+            -0.10675512477455443
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "reference better"
+        },
+        {
+          "reference": "outputs\\pemsd7_agstt_predictions.npz",
+          "challenger": "outputs\\pemsd7_stgcn_predictions.npz",
+          "null_val": null,
+          "n_valid_points": 2145024,
+          "mean_error_diff_ref_minus_challenger": -0.48762374963673166,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            -0.49179320373485824,
+            -0.48352834463114175
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "reference better"
+        },
+        {
+          "reference": "outputs\\pemsd7_agstt_predictions.npz",
+          "challenger": "outputs\\pemsd7_linear_predictions.npz",
+          "null_val": null,
+          "n_valid_points": 2145024,
+          "mean_error_diff_ref_minus_challenger": -0.7160471450181319,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            -0.721611880225302,
+            -0.710543691930395
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "reference better"
+        }
+      ],
+      "figures": {
+        "overall_metrics_bar": "outputs/pemsd7/figures/overall_metrics_bar.png",
+        "horizon_mae_curve": "outputs/pemsd7/figures/horizon_mae_curve.png"
+      }
+    },
+    "metr_la": {
+      "data_shape": [
+        34272,
+        207,
+        1
+      ],
+      "data_min": 0.0,
+      "data_max": 70.0,
+      "data_mean": 53.719017028808594,
+      "data_std": 20.26142692565918,
+      "adj_shape": [
+        207,
+        207
+      ],
+      "adj_nonzero": 1722,
+      "adj_density": 0.04018763565077365,
+      "benchmark": [
+        {
+          "config": "configs\\metr_la_dcrnn_baseline.yaml",
+          "run_name": "metr_la_dcrnn_baseline",
+          "model": "dcrnn",
+          "mae": 4.333531379699707,
+          "rmse": 8.977103233337402,
+          "mape_percent": 11.89837646484375,
+          "metrics_path": "outputs\\metr_la_dcrnn_metrics.json"
+        },
+        {
+          "config": "configs\\metr_la_agstt.yaml",
+          "run_name": "metr_la_agstt_full",
+          "model": "agstt",
+          "mae": 4.375058174133301,
+          "rmse": 8.824812889099121,
+          "mape_percent": 12.237902641296387,
+          "metrics_path": "outputs\\metr_la_agstt_metrics.json"
+        },
+        {
+          "config": "configs\\metr_la_lstm_baseline.yaml",
+          "run_name": "metr_la_lstm_baseline",
+          "model": "lstm",
+          "mae": 4.385382175445557,
+          "rmse": 8.990320205688477,
+          "mape_percent": 12.157991409301758,
+          "metrics_path": "outputs\\metr_la_lstm_metrics.json"
+        },
+        {
+          "config": "configs\\metr_la_stgcn_baseline.yaml",
+          "run_name": "metr_la_stgcn_baseline",
+          "model": "stgcn",
+          "mae": 4.543506145477295,
+          "rmse": 8.845425605773926,
+          "mape_percent": 12.619772911071777,
+          "metrics_path": "outputs\\metr_la_stgcn_metrics.json"
+        },
+        {
+          "config": "configs\\metr_la_linear_baseline.yaml",
+          "run_name": "metr_la_linear_baseline",
+          "model": "linear",
+          "mae": 5.107123374938965,
+          "rmse": 9.920559883117676,
+          "mape_percent": 13.665064811706543,
+          "metrics_path": "outputs\\metr_la_linear_metrics.json"
+        }
+      ],
+      "significance_vs_agstt": [
+        {
+          "reference": "outputs\\metr_la_agstt_predictions.npz",
+          "challenger": "outputs\\metr_la_dcrnn_predictions.npz",
+          "null_val": 0.0,
+          "n_valid_points": 1890984,
+          "mean_error_diff_ref_minus_challenger": 0.04152626857282371,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            0.0391727890281147,
+            0.043960156363164325
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "challenger better"
+        },
+        {
+          "reference": "outputs\\metr_la_agstt_predictions.npz",
+          "challenger": "outputs\\metr_la_lstm_predictions.npz",
+          "null_val": 0.0,
+          "n_valid_points": 1890984,
+          "mean_error_diff_ref_minus_challenger": -0.010324442128361333,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            -0.01286885017041438,
+            -0.00750486014241565
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "reference better"
+        },
+        {
+          "reference": "outputs\\metr_la_agstt_predictions.npz",
+          "challenger": "outputs\\metr_la_stgcn_predictions.npz",
+          "null_val": 0.0,
+          "n_valid_points": 1890984,
+          "mean_error_diff_ref_minus_challenger": -0.16844876552186605,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            -0.17201642979529003,
+            -0.16494985308973173
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "reference better"
+        },
+        {
+          "reference": "outputs\\metr_la_agstt_predictions.npz",
+          "challenger": "outputs\\metr_la_linear_predictions.npz",
+          "null_val": 0.0,
+          "n_valid_points": 1890984,
+          "mean_error_diff_ref_minus_challenger": -0.7320659456936395,
+          "permutation_p_value_two_sided": 0.0004997501249375312,
+          "bootstrap_95ci": [
+            -0.7378223238881451,
+            -0.7265976573318188
+          ],
+          "significant_at_0_05": true,
+          "interpretation": "reference better"
+        }
+      ],
+      "figures": {
+        "overall_metrics_bar": "outputs/metr_la/figures/overall_metrics_bar.png",
+        "horizon_mae_curve": "outputs/metr_la/figures/horizon_mae_curve.png"
+      }
+    }
+  },
+  "notes": [
+    "METR-LA evaluation uses null_val=0.0 to avoid invalid MAPE inflation caused by zero-speed ground truth.",
+    "GPU environment is enabled (CUDA PyTorch) and used in training/evaluation when device=auto.",
+    "Cross-split rolling evaluation now includes s1/s2/s3 windows with paired model comparison.",
+    "Seed-level significance for AG-STT(v3) vs DCRNN is included in outputs/improvements/seed_level_significance_v3_vs_dcrnn.*"
+  ],
+  "improvements": {
+    "long_budget": [
+      {
+        "config": "configs\\pemsd7_agstt_long_budget.yaml",
+        "run_name": "pemsd7_agstt_long_budget",
+        "model": "agstt",
+        "mae": 3.182805299758911,
+        "rmse": 6.218234539031982,
+        "mape_percent": 8.260438919067383,
+        "metrics_path": "outputs\\improvements\\pemsd7_agstt_long_budget_metrics.json"
+      },
+      {
+        "config": "configs\\pemsd7_agstt_no_adaptive.yaml",
+        "run_name": "pemsd7_agstt_no_adaptive",
+        "model": "agstt",
+        "mae": 3.5943901538848877,
+        "rmse": 6.808689117431641,
+        "mape_percent": 9.533635139465332,
+        "metrics_path": "outputs\\improvements\\pemsd7_agstt_no_adaptive_metrics.json"
+      },
+      {
+        "config": "configs\\metr_la_agstt_long_budget.yaml",
+        "run_name": "metr_la_agstt_long_budget",
+        "model": "agstt",
+        "mae": 3.791370391845703,
+        "rmse": 8.289145469665527,
+        "mape_percent": 9.980011940002441,
+        "metrics_path": "outputs\\improvements\\metr_la_agstt_long_budget_metrics.json"
+      },
+      {
+        "config": "configs\\metr_la_agstt_no_adaptive.yaml",
+        "run_name": "metr_la_agstt_no_adaptive",
+        "model": "agstt",
+        "mae": 4.334160804748535,
+        "rmse": 8.750049591064453,
+        "mape_percent": 12.381336212158203,
+        "metrics_path": "outputs\\improvements\\metr_la_agstt_no_adaptive_metrics.json"
+      }
+    ],
+    "robustness": [
+      {
+        "dataset": "metr_la",
+        "run_name": "metr_la_dcrnn_baseline",
+        "model": "dcrnn",
+        "n_runs": 3,
+        "mae_mean": 4.348700364430745,
+        "mae_std": 0.01174966933709524,
+        "rmse_mean": 8.97193972269694,
+        "rmse_std": 0.004261601954401732,
+        "mape_mean": 11.945955912272135,
+        "mape_std": 0.057259106667390924
+      },
+      {
+        "dataset": "metr_la",
+        "run_name": "metr_la_agstt_full",
+        "model": "agstt",
+        "n_runs": 3,
+        "mae_mean": 4.3618958791097,
+        "mae_std": 0.0738196513725272,
+        "rmse_mean": 8.878434816996256,
+        "rmse_std": 0.11649411896828285,
+        "mape_mean": 12.285273234049479,
+        "mape_std": 0.18502620934382516
+      },
+      {
+        "dataset": "pemsd7_228",
+        "run_name": "pemsd7_dcrnn_baseline",
+        "model": "dcrnn",
+        "n_runs": 3,
+        "mae_mean": 3.6080573399861655,
+        "mae_std": 0.013648621368425306,
+        "rmse_mean": 7.043883164723714,
+        "rmse_std": 0.01690038585042089,
+        "mape_mean": 9.06842041015625,
+        "mape_std": 0.1172947210426364
+      },
+      {
+        "dataset": "pemsd7_228",
+        "run_name": "pemsd7_agstt_full",
+        "model": "agstt",
+        "n_runs": 3,
+        "mae_mean": 3.614051024119059,
+        "mae_std": 0.00963859490200578,
+        "rmse_mean": 6.842775185902913,
+        "rmse_std": 0.012120501932642762,
+        "mape_mean": 9.277761459350586,
+        "mape_std": 0.05351861852035744
+      }
+    ],
+    "fair_budget": [
+      {
+        "config": "configs\\fair_budget\\pemsd7_agstt_long_budget_fair.yaml",
+        "run_name": "pemsd7_agstt_long_budget_fair",
+        "model": "agstt",
+        "mae": 3.182805299758911,
+        "rmse": 6.218234539031982,
+        "mape_percent": 8.260438919067383,
+        "metrics_path": "outputs\\fair_budget\\pemsd7_agstt_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\pemsd7_dcrnn_long_budget_fair.yaml",
+        "run_name": "pemsd7_dcrnn_long_budget_fair",
+        "model": "dcrnn",
+        "mae": 3.254282236099243,
+        "rmse": 6.464784622192383,
+        "mape_percent": 8.306073188781738,
+        "metrics_path": "outputs\\fair_budget\\pemsd7_dcrnn_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\pemsd7_lstm_long_budget_fair.yaml",
+        "run_name": "pemsd7_lstm_long_budget_fair",
+        "model": "lstm",
+        "mae": 3.3994827270507812,
+        "rmse": 6.911734104156494,
+        "mape_percent": 8.654446601867676,
+        "metrics_path": "outputs\\fair_budget\\pemsd7_lstm_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\pemsd7_stgcn_long_budget_fair.yaml",
+        "run_name": "pemsd7_stgcn_long_budget_fair",
+        "model": "stgcn",
+        "mae": 3.465765953063965,
+        "rmse": 6.651669502258301,
+        "mape_percent": 9.029845237731934,
+        "metrics_path": "outputs\\fair_budget\\pemsd7_stgcn_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\pemsd7_linear_long_budget_fair.yaml",
+        "run_name": "pemsd7_linear_long_budget_fair",
+        "model": "linear",
+        "mae": 3.661048412322998,
+        "rmse": 7.25381326675415,
+        "mape_percent": 9.40962028503418,
+        "metrics_path": "outputs\\fair_budget\\pemsd7_linear_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\metr_la_agstt_long_budget_fair.yaml",
+        "run_name": "metr_la_agstt_long_budget_fair",
+        "model": "agstt",
+        "mae": 3.791370391845703,
+        "rmse": 8.289145469665527,
+        "mape_percent": 9.980010032653809,
+        "metrics_path": "outputs\\fair_budget\\metr_la_agstt_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\metr_la_stgcn_long_budget_fair.yaml",
+        "run_name": "metr_la_stgcn_long_budget_fair",
+        "model": "stgcn",
+        "mae": 3.8832435607910156,
+        "rmse": 8.318571090698242,
+        "mape_percent": 10.245216369628906,
+        "metrics_path": "outputs\\fair_budget\\metr_la_stgcn_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\metr_la_dcrnn_long_budget_fair.yaml",
+        "run_name": "metr_la_dcrnn_long_budget_fair",
+        "model": "dcrnn",
+        "mae": 3.892084836959839,
+        "rmse": 8.329840660095215,
+        "mape_percent": 9.96667766571045,
+        "metrics_path": "outputs\\fair_budget\\metr_la_dcrnn_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\metr_la_lstm_long_budget_fair.yaml",
+        "run_name": "metr_la_lstm_long_budget_fair",
+        "model": "lstm",
+        "mae": 3.9286510944366455,
+        "rmse": 8.481534957885742,
+        "mape_percent": 10.115926742553711,
+        "metrics_path": "outputs\\fair_budget\\metr_la_lstm_long_budget_fair_metrics.json"
+      },
+      {
+        "config": "configs\\fair_budget\\metr_la_linear_long_budget_fair.yaml",
+        "run_name": "metr_la_linear_long_budget_fair",
+        "model": "linear",
+        "mae": 4.2371039390563965,
+        "rmse": 8.861954689025879,
+        "mape_percent": 10.486452102661133,
+        "metrics_path": "outputs\\fair_budget\\metr_la_linear_long_budget_fair_metrics.json"
+      }
+    ],
+    "fusion_sweeps": [
+      {
+        "config": "configs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v3.yaml",
+        "run_name": "pemsd7_agstt_fusion_constrained_v3",
+        "model": "agstt",
+        "mae": 3.550269365310669,
+        "rmse": 6.761472702026367,
+        "mape_percent": 9.324164390563965,
+        "metrics_path": "outputs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v3_metrics.json"
+      },
+      {
+        "config": "configs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v2.yaml",
+        "run_name": "pemsd7_agstt_fusion_constrained_v2",
+        "model": "agstt",
+        "mae": 3.5571298599243164,
+        "rmse": 6.760979175567627,
+        "mape_percent": 9.349685668945312,
+        "metrics_path": "outputs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v2_metrics.json"
+      },
+      {
+        "config": "configs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v1.yaml",
+        "run_name": "pemsd7_agstt_fusion_constrained_v1",
+        "model": "agstt",
+        "mae": 3.5572917461395264,
+        "rmse": 6.763512134552002,
+        "mape_percent": 9.342117309570312,
+        "metrics_path": "outputs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v1_metrics.json"
+      },
+      {
+        "config": "configs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v3.yaml",
+        "run_name": "metr_la_agstt_fusion_constrained_v3",
+        "model": "agstt",
+        "mae": 4.279740810394287,
+        "rmse": 8.75130844116211,
+        "mape_percent": 11.662571907043457,
+        "metrics_path": "outputs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v3_metrics.json"
+      },
+      {
+        "config": "configs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v1.yaml",
+        "run_name": "metr_la_agstt_fusion_constrained_v1",
+        "model": "agstt",
+        "mae": 4.283483505249023,
+        "rmse": 8.767502784729004,
+        "mape_percent": 11.6497163772583,
+        "metrics_path": "outputs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v1_metrics.json"
+      },
+      {
+        "config": "configs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v2.yaml",
+        "run_name": "metr_la_agstt_fusion_constrained_v2",
+        "model": "agstt",
+        "mae": 4.285651206970215,
+        "rmse": 8.780484199523926,
+        "mape_percent": 11.627791404724121,
+        "metrics_path": "outputs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v2_metrics.json"
+      }
+    ],
+    "robustness_n5": [
+      {
+        "dataset": "metr_la",
+        "run_name": "metr_la_agstt_full",
+        "model": "agstt",
+        "n_runs": 5,
+        "mae_mean": 4.308125591278076,
+        "mae_std": 0.0455308387003276,
+        "rmse_mean": 8.796869659423828,
+        "rmse_std": 0.1302883441631148,
+        "mape_mean": 12.017918968200684,
+        "mape_std": 0.30640569118840677
+      },
+      {
+        "dataset": "metr_la",
+        "run_name": "metr_la_dcrnn_baseline",
+        "model": "dcrnn",
+        "n_runs": 5,
+        "mae_mean": 4.333203983306885,
+        "mae_std": 0.015491868682831748,
+        "rmse_mean": 8.92215347290039,
+        "rmse_std": 0.048853326943315956,
+        "mape_mean": 11.957451629638673,
+        "mape_std": 0.04032891822948126
+      },
+      {
+        "dataset": "pemsd7_228",
+        "run_name": "pemsd7_agstt_full",
+        "model": "agstt",
+        "n_runs": 5,
+        "mae_mean": 3.599855136871338,
+        "mae_std": 0.01816925915309781,
+        "rmse_mean": 6.858243465423584,
+        "rmse_std": 0.08001517302054836,
+        "mape_mean": 9.378789710998536,
+        "mape_std": 0.10682413457841834
+      },
+      {
+        "dataset": "pemsd7_228",
+        "run_name": "pemsd7_dcrnn_baseline",
+        "model": "dcrnn",
+        "n_runs": 5,
+        "mae_mean": 3.6077099323272703,
+        "mae_std": 0.01197178027934886,
+        "rmse_mean": 7.033426761627197,
+        "rmse_std": 0.03512582278286632,
+        "mape_mean": 9.104414939880371,
+        "mape_std": 0.11071356258499555
+      }
+    ],
+    "robustness_v3_n5": [
+      {
+        "dataset": "metr_la",
+        "run_name": "metr_la_agstt_fusion_constrained_v3",
+        "model": "agstt",
+        "n_runs": 5,
+        "mae_mean": 4.28508243560791,
+        "mae_std": 0.030767177982152602,
+        "rmse_mean": 8.78544578552246,
+        "rmse_std": 0.06732207862375031,
+        "mape_mean": 11.994390678405761,
+        "mape_std": 0.18206840010108816
+      },
+      {
+        "dataset": "pemsd7_228",
+        "run_name": "pemsd7_agstt_fusion_constrained_v3",
+        "model": "agstt",
+        "n_runs": 5,
+        "mae_mean": 3.607661247253418,
+        "mae_std": 0.04617031558153247,
+        "rmse_mean": 6.882705402374268,
+        "rmse_std": 0.0797991175158152,
+        "mape_mean": 9.438701629638672,
+        "mape_std": 0.1429951768759184
+      }
+    ],
+    "seed_level_significance_v3_vs_dcrnn": {
+      "reference_label": "agstt_fusion_constrained_v3",
+      "challenger_label": "dcrnn_baseline",
+      "summary": [
+        {
+          "dataset": "metr_la",
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "n_seeds": 5,
+          "seeds": [
+            7,
+            42,
+            123,
+            2026,
+            3407
+          ],
+          "mean_diff_ref_minus_challenger": -0.04812154769897461,
+          "std_diff_ref_minus_challenger": 0.01915396454062712,
+          "bootstrap_95ci": [
+            -0.06510276794433593,
+            -0.03114032745361328
+          ],
+          "p_value_two_sided": 0.09090909090909091,
+          "reference_win_count": 5,
+          "challenger_win_count": 0,
+          "tie_count": 0,
+          "significant_at_0_05": false,
+          "interpretation": "agstt_fusion_constrained_v3 better"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "n_seeds": 5,
+          "seeds": [
+            7,
+            42,
+            123,
+            2026,
+            3407
+          ],
+          "mean_diff_ref_minus_challenger": -4.868507385253906e-05,
+          "std_diff_ref_minus_challenger": 0.03790316873822843,
+          "bootstrap_95ci": [
+            -0.029721784591674804,
+            0.0333979606628418
+          ],
+          "p_value_two_sided": 1.0,
+          "reference_win_count": 2,
+          "challenger_win_count": 3,
+          "tie_count": 0,
+          "significant_at_0_05": false,
+          "interpretation": "agstt_fusion_constrained_v3 better"
+        }
+      ],
+      "per_seed": [
+        {
+          "dataset": "metr_la",
+          "seed": 7,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 4.244814872741699,
+          "challenger_mae": 4.317163467407227,
+          "diff_ref_minus_challenger": -0.07234859466552734,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "metr_la",
+          "seed": 42,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 4.279740810394287,
+          "challenger_mae": 4.323475360870361,
+          "diff_ref_minus_challenger": -0.04373455047607422,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "metr_la",
+          "seed": 123,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 4.2645392417907715,
+          "challenger_mae": 4.333080291748047,
+          "diff_ref_minus_challenger": -0.06854104995727539,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "metr_la",
+          "seed": 2026,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 4.3335371017456055,
+          "challenger_mae": 4.362163066864014,
+          "diff_ref_minus_challenger": -0.028625965118408203,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "metr_la",
+          "seed": 3407,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 4.3027801513671875,
+          "challenger_mae": 4.330137729644775,
+          "diff_ref_minus_challenger": -0.02735757827758789,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "seed": 7,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 3.579956293106079,
+          "challenger_mae": 3.616032123565674,
+          "diff_ref_minus_challenger": -0.03607583045959473,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "seed": 42,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 3.550269365310669,
+          "challenger_mae": 3.589872121810913,
+          "diff_ref_minus_challenger": -0.03960275650024414,
+          "better_model": "agstt_fusion_constrained_v3"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "seed": 123,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 3.619419574737549,
+          "challenger_mae": 3.611922025680542,
+          "diff_ref_minus_challenger": 0.007497549057006836,
+          "better_model": "dcrnn_baseline"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "seed": 2026,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 3.687744617462158,
+          "challenger_mae": 3.6225552558898926,
+          "diff_ref_minus_challenger": 0.06518936157226562,
+          "better_model": "dcrnn_baseline"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "seed": 3407,
+          "reference_label": "agstt_fusion_constrained_v3",
+          "challenger_label": "dcrnn_baseline",
+          "reference_mae": 3.6009163856506348,
+          "challenger_mae": 3.598168134689331,
+          "diff_ref_minus_challenger": 0.002748250961303711,
+          "better_model": "dcrnn_baseline"
+        }
+      ]
+    },
+    "cross_split_legacy": [
+      {
+        "config": "configs\\cross_split\\pemsd7_agstt_cross_split_s1.yaml",
+        "run_name": "pemsd7_agstt_cross_split_s1",
+        "model": "agstt",
+        "mae": 3.621067762374878,
+        "rmse": 6.987359523773193,
+        "mape_percent": 9.728105545043945,
+        "metrics_path": "outputs\\cross_split\\pemsd7_agstt_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split\\pemsd7_dcrnn_cross_split_s1.yaml",
+        "run_name": "pemsd7_dcrnn_cross_split_s1",
+        "model": "dcrnn",
+        "mae": 3.676508665084839,
+        "rmse": 7.21737813949585,
+        "mape_percent": 9.657818794250488,
+        "metrics_path": "outputs\\cross_split\\pemsd7_dcrnn_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split\\metr_la_dcrnn_cross_split_s1.yaml",
+        "run_name": "metr_la_dcrnn_cross_split_s1",
+        "model": "dcrnn",
+        "mae": 5.080355167388916,
+        "rmse": 11.034643173217773,
+        "mape_percent": 13.918632507324219,
+        "metrics_path": "outputs\\cross_split\\metr_la_dcrnn_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split\\metr_la_agstt_cross_split_s1.yaml",
+        "run_name": "metr_la_agstt_cross_split_s1",
+        "model": "agstt",
+        "mae": 5.270813941955566,
+        "rmse": 11.179208755493164,
+        "mape_percent": 14.782817840576172,
+        "metrics_path": "outputs\\cross_split\\metr_la_agstt_cross_split_s1_metrics.json"
+      }
+    ],
+    "cross_split_v3": [
+      {
+        "config": "configs\\cross_split_v3\\pemsd7_agstt_v3_cross_split_s2.yaml",
+        "run_name": "pemsd7_agstt_v3_cross_split_s2",
+        "model": "agstt",
+        "mae": 3.3196334838867188,
+        "rmse": 6.440239429473877,
+        "mape_percent": 8.319415092468262,
+        "metrics_path": "outputs\\cross_split_v3\\pemsd7_agstt_v3_cross_split_s2_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\pemsd7_dcrnn_cross_split_s2.yaml",
+        "run_name": "pemsd7_dcrnn_cross_split_s2",
+        "model": "dcrnn",
+        "mae": 3.364511728286743,
+        "rmse": 6.644075393676758,
+        "mape_percent": 8.214223861694336,
+        "metrics_path": "outputs\\cross_split_v3\\pemsd7_dcrnn_cross_split_s2_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\pemsd7_agstt_v3_cross_split_s1.yaml",
+        "run_name": "pemsd7_agstt_v3_cross_split_s1",
+        "model": "agstt",
+        "mae": 3.6417417526245117,
+        "rmse": 7.068909645080566,
+        "mape_percent": 9.589377403259277,
+        "metrics_path": "outputs\\cross_split_v3\\pemsd7_agstt_v3_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\pemsd7_dcrnn_cross_split_s1.yaml",
+        "run_name": "pemsd7_dcrnn_cross_split_s1",
+        "model": "dcrnn",
+        "mae": 3.676508665084839,
+        "rmse": 7.21737813949585,
+        "mape_percent": 9.657818794250488,
+        "metrics_path": "outputs\\cross_split_v3\\pemsd7_dcrnn_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\metr_la_dcrnn_cross_split_s3.yaml",
+        "run_name": "metr_la_dcrnn_cross_split_s3",
+        "model": "dcrnn",
+        "mae": 4.489026069641113,
+        "rmse": 9.816500663757324,
+        "mape_percent": 11.156551361083984,
+        "metrics_path": "outputs\\cross_split_v3\\metr_la_dcrnn_cross_split_s3_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\metr_la_agstt_v3_cross_split_s3.yaml",
+        "run_name": "metr_la_agstt_v3_cross_split_s3",
+        "model": "agstt",
+        "mae": 4.579782962799072,
+        "rmse": 8.985357284545898,
+        "mape_percent": 12.34089469909668,
+        "metrics_path": "outputs\\cross_split_v3\\metr_la_agstt_v3_cross_split_s3_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\metr_la_agstt_v3_cross_split_s2.yaml",
+        "run_name": "metr_la_agstt_v3_cross_split_s2",
+        "model": "agstt",
+        "mae": 4.588954925537109,
+        "rmse": 9.93319034576416,
+        "mape_percent": 11.633844375610352,
+        "metrics_path": "outputs\\cross_split_v3\\metr_la_agstt_v3_cross_split_s2_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\metr_la_dcrnn_cross_split_s2.yaml",
+        "run_name": "metr_la_dcrnn_cross_split_s2",
+        "model": "dcrnn",
+        "mae": 4.63016414642334,
+        "rmse": 10.11217212677002,
+        "mape_percent": 11.649094581604004,
+        "metrics_path": "outputs\\cross_split_v3\\metr_la_dcrnn_cross_split_s2_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\metr_la_dcrnn_cross_split_s1.yaml",
+        "run_name": "metr_la_dcrnn_cross_split_s1",
+        "model": "dcrnn",
+        "mae": 5.080355167388916,
+        "rmse": 11.034643173217773,
+        "mape_percent": 13.918632507324219,
+        "metrics_path": "outputs\\cross_split_v3\\metr_la_dcrnn_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\metr_la_agstt_v3_cross_split_s1.yaml",
+        "run_name": "metr_la_agstt_v3_cross_split_s1",
+        "model": "agstt",
+        "mae": 5.140191078186035,
+        "rmse": 10.866122245788574,
+        "mape_percent": 14.42252254486084,
+        "metrics_path": "outputs\\cross_split_v3\\metr_la_agstt_v3_cross_split_s1_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\pemsd7_dcrnn_cross_split_s3.yaml",
+        "run_name": "pemsd7_dcrnn_cross_split_s3",
+        "model": "dcrnn",
+        "mae": 5.270542144775391,
+        "rmse": 8.746108055114746,
+        "mape_percent": 15.533462524414062,
+        "metrics_path": "outputs\\cross_split_v3\\pemsd7_dcrnn_cross_split_s3_metrics.json"
+      },
+      {
+        "config": "configs\\cross_split_v3\\pemsd7_agstt_v3_cross_split_s3.yaml",
+        "run_name": "pemsd7_agstt_v3_cross_split_s3",
+        "model": "agstt",
+        "mae": 6.626040458679199,
+        "rmse": 11.053868293762207,
+        "mape_percent": 21.992944717407227,
+        "metrics_path": "outputs\\cross_split_v3\\pemsd7_agstt_v3_cross_split_s3_metrics.json"
+      }
+    ],
+    "cross_split_v3_rolling": {
+      "per_split": [
+        {
+          "dataset": "metr_la",
+          "split": "s1",
+          "agstt_mae": 5.140191078186035,
+          "dcrnn_mae": 5.080355167388916,
+          "delta_agstt_minus_dcrnn": 0.05983591079711914,
+          "better_model": "dcrnn"
+        },
+        {
+          "dataset": "metr_la",
+          "split": "s2",
+          "agstt_mae": 4.588954925537109,
+          "dcrnn_mae": 4.63016414642334,
+          "delta_agstt_minus_dcrnn": -0.04120922088623047,
+          "better_model": "agstt"
+        },
+        {
+          "dataset": "metr_la",
+          "split": "s3",
+          "agstt_mae": 4.579782962799072,
+          "dcrnn_mae": 4.489026069641113,
+          "delta_agstt_minus_dcrnn": 0.09075689315795898,
+          "better_model": "dcrnn"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "split": "s1",
+          "agstt_mae": 3.6417417526245117,
+          "dcrnn_mae": 3.676508665084839,
+          "delta_agstt_minus_dcrnn": -0.03476691246032715,
+          "better_model": "agstt"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "split": "s2",
+          "agstt_mae": 3.3196334838867188,
+          "dcrnn_mae": 3.364511728286743,
+          "delta_agstt_minus_dcrnn": -0.044878244400024414,
+          "better_model": "agstt"
+        },
+        {
+          "dataset": "pemsd7_228",
+          "split": "s3",
+          "agstt_mae": 6.626040458679199,
+          "dcrnn_mae": 5.270542144775391,
+          "delta_agstt_minus_dcrnn": 1.3554983139038086,
+          "better_model": "dcrnn"
+        }
+      ],
+      "aggregated": [
+        {
+          "dataset": "metr_la",
+          "model": "dcrnn",
+          "n_splits": 3,
+          "mae_mean": 4.733181794484456,
+          "mae_median": 4.63016414642334,
+          "mae_std": 0.2521600051816844,
+          "mae_best": 4.489026069641113,
+          "mae_worst": 5.080355167388916
+        },
+        {
+          "dataset": "metr_la",
+          "model": "agstt",
+          "n_splits": 3,
+          "mae_mean": 4.769642988840739,
+          "mae_median": 4.588954925537109,
+          "mae_std": 0.2620438209068656,
+          "mae_best": 4.579782962799072,
+          "mae_worst": 5.140191078186035
+        },
+        {
+          "dataset": "pemsd7_228",
+          "model": "dcrnn",
+          "n_splits": 3,
+          "mae_mean": 4.103854179382324,
+          "mae_median": 3.676508665084839,
+          "mae_std": 0.8347479174727376,
+          "mae_best": 3.364511728286743,
+          "mae_worst": 5.270542144775391
+        },
+        {
+          "dataset": "pemsd7_228",
+          "model": "agstt",
+          "n_splits": 3,
+          "mae_mean": 4.529138565063477,
+          "mae_median": 3.6417417526245117,
+          "mae_std": 1.4885533464372307,
+          "mae_best": 3.3196334838867188,
+          "mae_worst": 6.626040458679199
+        }
+      ],
+      "head_to_head": [
+        {
+          "dataset": "metr_la",
+          "n_splits": 3,
+          "agstt_win_count": 1,
+          "dcrnn_win_count": 2,
+          "tie_count": 0,
+          "mean_delta_agstt_minus_dcrnn": 0.036461194356282554
+        },
+        {
+          "dataset": "pemsd7_228",
+          "n_splits": 3,
+          "agstt_win_count": 2,
+          "dcrnn_win_count": 1,
+          "tie_count": 0,
+          "mean_delta_agstt_minus_dcrnn": 0.42528438568115234
+        }
+      ]
+    }
+  },
+  "result_files": {
+    "pems_benchmark_md": "outputs/pemsd7/benchmark_summary.md",
+    "metr_benchmark_md": "outputs/metr_la/benchmark_summary.md",
+    "pems_significance_md": "outputs/pemsd7/significance_test.md",
+    "metr_significance_md": "outputs/metr_la/significance_test.md",
+    "improvements_benchmark_md": "outputs/improvements/benchmark_summary.md",
+    "improvements_robustness_md": "outputs/improvements/robustness_summary.md",
+    "fair_budget_md": "outputs/fair_budget/benchmark_summary.md",
+    "fusion_sweeps_md": "outputs/fusion_sweeps/benchmark_summary.md",
+    "robustness_n5_md": "outputs/improvements/robustness_summary_n5.md",
+    "robustness_v3_n5_md": "outputs/improvements/robustness_summary_v3_n5.md",
+    "seed_level_significance_v3_md": "outputs/improvements/seed_level_significance_v3_vs_dcrnn.md",
+    "cross_split_legacy_md": "outputs/cross_split/benchmark_summary.md",
+    "cross_split_v3_md": "outputs/cross_split_v3/benchmark_summary.md",
+    "cross_split_v3_rolling_md": "outputs/cross_split_v3/rolling_summary.md"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "config": "configs\\pemsd7_agstt_long_budget.yaml",
+    "run_name": "pemsd7_agstt_long_budget",
+    "model": "agstt",
+    "mae": 3.182805299758911,
+    "rmse": 6.218234539031982,
+    "mape_percent": 8.260438919067383,
+    "metrics_path": "outputs\\improvements\\pemsd7_agstt_long_budget_metrics.json"
+  },
+  {
+    "config": "configs\\pemsd7_agstt_no_adaptive.yaml",
+    "run_name": "pemsd7_agstt_no_adaptive",
+    "model": "agstt",
+    "mae": 3.5943901538848877,
+    "rmse": 6.808689117431641,
+    "mape_percent": 9.533635139465332,
+    "metrics_path": "outputs\\improvements\\pemsd7_agstt_no_adaptive_metrics.json"
+  },
+  {
+    "config": "configs\\metr_la_agstt_long_budget.yaml",
+    "run_name": "metr_la_agstt_long_budget",
+    "model": "agstt",
+    "mae": 3.791370391845703,
+    "rmse": 8.289145469665527,
+    "mape_percent": 9.980011940002441,
+    "metrics_path": "outputs\\improvements\\metr_la_agstt_long_budget_metrics.json"
+  },
+  {
+    "config": "configs\\metr_la_agstt_no_adaptive.yaml",
+    "run_name": "metr_la_agstt_no_adaptive",
+    "model": "agstt",
+    "mae": 4.334160804748535,
+    "rmse": 8.750049591064453,
+    "mape_percent": 12.381336212158203,
+    "metrics_path": "outputs\\improvements\\metr_la_agstt_no_adaptive_metrics.json"
+  }
+]

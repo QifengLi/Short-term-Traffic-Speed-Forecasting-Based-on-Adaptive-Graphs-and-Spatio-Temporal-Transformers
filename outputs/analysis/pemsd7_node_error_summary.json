@@ -1,0 +1,15 @@
+{
+  "dataset": "pemsd7",
+  "null_val": null,
+  "node_count": 228,
+  "selected_node_for_curve": 211,
+  "selected_node_agstt_mae": 4.5717690428908995,
+  "selected_node_dcrnn_mae": 3.5849174593581634,
+  "selected_node_gap_agstt_minus_dcrnn": 0.986851583532736,
+  "outputs": {
+    "agstt_topk_csv": "outputs/analysis/pemsd7_top10_hardest_nodes_agstt.csv",
+    "dcrnn_topk_csv": "outputs/analysis/pemsd7_top10_hardest_nodes_dcrnn.csv",
+    "gap_topk_csv": "outputs/analysis/pemsd7_top10_largest_agstt_dcrnn_gap_nodes.csv",
+    "single_node_curve_png": "outputs/analysis/pemsd7_single_node_curve_node211.png"
+  }
+}
