@@ -1,0 +1,50 @@
+[
+  {
+    "dataset": "metr_la",
+    "run_name": "metr_la_agstt_full",
+    "model": "agstt",
+    "n_runs": 5,
+    "mae_mean": 4.308125591278076,
+    "mae_std": 0.0455308387003276,
+    "rmse_mean": 8.796869659423828,
+    "rmse_std": 0.1302883441631148,
+    "mape_mean": 12.017918968200684,
+    "mape_std": 0.30640569118840677
+  },
+  {
+    "dataset": "metr_la",
+    "run_name": "metr_la_dcrnn_baseline",
+    "model": "dcrnn",
+    "n_runs": 5,
+    "mae_mean": 4.333203983306885,
+    "mae_std": 0.015491868682831748,
+    "rmse_mean": 8.92215347290039,
+    "rmse_std": 0.048853326943315956,
+    "mape_mean": 11.957451629638673,
+    "mape_std": 0.04032891822948126
+  },
+  {
+    "dataset": "pemsd7_228",
+    "run_name": "pemsd7_agstt_full",
+    "model": "agstt",
+    "n_runs": 5,
+    "mae_mean": 3.599855136871338,
+    "mae_std": 0.01816925915309781,
+    "rmse_mean": 6.858243465423584,
+    "rmse_std": 0.08001517302054836,
+    "mape_mean": 9.378789710998536,
+    "mape_std": 0.10682413457841834
+  },
+  {
+    "dataset": "pemsd7_228",
+    "run_name": "pemsd7_dcrnn_baseline",
+    "model": "dcrnn",
+    "n_runs": 5,
+    "mae_mean": 3.6077099323272703,
+    "mae_std": 0.01197178027934886,
+    "rmse_mean": 7.033426761627197,
+    "rmse_std": 0.03512582278286632,
+    "mape_mean": 9.104414939880371,
+    "mape_std": 0.11071356258499555
+  }
+]

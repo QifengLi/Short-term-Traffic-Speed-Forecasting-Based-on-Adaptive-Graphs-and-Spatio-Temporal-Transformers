@@ -1,0 +1,58 @@
+[
+  {
+    "reference": "outputs\\metr_la_agstt_predictions.npz",
+    "challenger": "outputs\\metr_la_dcrnn_predictions.npz",
+    "null_val": 0.0,
+    "n_valid_points": 1890984,
+    "mean_error_diff_ref_minus_challenger": 0.04152626857282371,
+    "permutation_p_value_two_sided": 0.0004997501249375312,
+    "bootstrap_95ci": [
+      0.0391727890281147,
+      0.043960156363164325
+    ],
+    "significant_at_0_05": true,
+    "interpretation": "challenger better"
+  },
+  {
+    "reference": "outputs\\metr_la_agstt_predictions.npz",
+    "challenger": "outputs\\metr_la_lstm_predictions.npz",
+    "null_val": 0.0,
+    "n_valid_points": 1890984,
+    "mean_error_diff_ref_minus_challenger": -0.010324442128361333,
+    "permutation_p_value_two_sided": 0.0004997501249375312,
+    "bootstrap_95ci": [
+      -0.01286885017041438,
+      -0.00750486014241565
+    ],
+    "significant_at_0_05": true,
+    "interpretation": "reference better"
+  },
+  {
+    "reference": "outputs\\metr_la_agstt_predictions.npz",
+    "challenger": "outputs\\metr_la_stgcn_predictions.npz",
+    "null_val": 0.0,
+    "n_valid_points": 1890984,
+    "mean_error_diff_ref_minus_challenger": -0.16844876552186605,
+    "permutation_p_value_two_sided": 0.0004997501249375312,
+    "bootstrap_95ci": [
+      -0.17201642979529003,
+      -0.16494985308973173
+    ],
+    "significant_at_0_05": true,
+    "interpretation": "reference better"
+  },
+  {
+    "reference": "outputs\\metr_la_agstt_predictions.npz",
+    "challenger": "outputs\\metr_la_linear_predictions.npz",
+    "null_val": 0.0,
+    "n_valid_points": 1890984,
+    "mean_error_diff_ref_minus_challenger": -0.7320659456936395,
+    "permutation_p_value_two_sided": 0.0004997501249375312,
+    "bootstrap_95ci": [
+      -0.7378223238881451,
+      -0.7265976573318188
+    ],
+    "significant_at_0_05": true,
+    "interpretation": "reference better"
+  }
+]

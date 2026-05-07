@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
+checkpoints/
+logs/
+outputs/
+data/*.npz
+data/*.npy
+
