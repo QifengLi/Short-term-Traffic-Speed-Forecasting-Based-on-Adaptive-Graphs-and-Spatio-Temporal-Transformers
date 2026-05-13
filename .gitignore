@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+
+# Large local artefacts
+data/
+checkpoints/
+outputs/**/*.npz
+outputs/**/*.pt
+outputs/**/*.pth
+outputs/**/*.ckpt
+
+# Temporary Office files
+~$*
+*.tmp
+
