@@ -5,7 +5,6 @@ This directory contains the final report document and the lightweight evidence f
 ## Contents
 
 ```text
-final_report/Short-term_Traffic_Flow_Forecasting_AG-STT_Final_Report.docx
 final_report/assets/evidence/   JSON result summaries and significance-test outputs
 final_report/assets/tables/     CSV files used as table evidence
 final_report/assets/figures/    Figures included in the report
