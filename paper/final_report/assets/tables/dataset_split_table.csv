@@ -1,0 +1,3 @@
+dataset,label,raw_timesteps,used_timesteps_standard,nodes,features,value_min,value_max,value_mean,value_std,adj_nonzero,adj_density,seq_len,pred_len,train_ratio,val_ratio,test_ratio,null_val,train_steps,val_steps,test_steps,train_windows,val_windows,test_windows
+pemsd7_228,PEMSD7-228,12672,4032,228,1,3.0,82.5999984741211,58.889183991657724,13.483268663349149,18620,0.358187134502924,12,12,0.6,0.2,0.2,,2419,806,807,2396,783,784
+metr_la,METR-LA,34272,4032,207,1,0.0,70.0,53.71902111364028,20.26143079557665,1722,0.04018763565077365,12,12,0.7,0.1,0.20000000000000004,0.0,2822,403,807,2799,380,784

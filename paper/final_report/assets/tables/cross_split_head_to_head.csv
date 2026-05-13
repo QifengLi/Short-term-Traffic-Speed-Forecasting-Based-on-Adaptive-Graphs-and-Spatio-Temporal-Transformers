@@ -1,0 +1,3 @@
+dataset,n_splits,agstt_win_count,dcrnn_win_count,tie_count,mean_delta_agstt_minus_dcrnn
+metr_la,3,1,2,0,0.036461194356282554
+pemsd7_228,3,2,1,0,0.42528438568115234

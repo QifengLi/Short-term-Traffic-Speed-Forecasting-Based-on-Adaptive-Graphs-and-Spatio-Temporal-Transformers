@@ -1,0 +1,9 @@
+dataset,challenger_run,reference,challenger,null_val,n_valid_points,mean_error_diff_ref_minus_challenger,permutation_p_value_two_sided,bootstrap_95ci,significant_at_0_05,interpretation
+pemsd7_228,pemsd7_dcrnn,outputs\pemsd7_agstt_predictions.npz,outputs\pemsd7_dcrnn_predictions.npz,,2145024,0.010920639256437121,0.0004997501249375312,"[0.008309906729295723, 0.013672517433358853]",True,challenger better
+pemsd7_228,pemsd7_lstm,outputs\pemsd7_agstt_predictions.npz,outputs\pemsd7_lstm_predictions.npz,,2145024,-0.11026274622009512,0.0004997501249375312,"[-0.11356974275610866, -0.10675512477455443]",True,reference better
+pemsd7_228,pemsd7_stgcn,outputs\pemsd7_agstt_predictions.npz,outputs\pemsd7_stgcn_predictions.npz,,2145024,-0.48762374963673166,0.0004997501249375312,"[-0.49179320373485824, -0.48352834463114175]",True,reference better
+pemsd7_228,pemsd7_linear,outputs\pemsd7_agstt_predictions.npz,outputs\pemsd7_linear_predictions.npz,,2145024,-0.7160471450181319,0.0004997501249375312,"[-0.721611880225302, -0.710543691930395]",True,reference better
+metr_la,metr_la_dcrnn,outputs\metr_la_agstt_predictions.npz,outputs\metr_la_dcrnn_predictions.npz,0.0,1890984,0.04152626857282371,0.0004997501249375312,"[0.0391727890281147, 0.043960156363164325]",True,challenger better
+metr_la,metr_la_lstm,outputs\metr_la_agstt_predictions.npz,outputs\metr_la_lstm_predictions.npz,0.0,1890984,-0.010324442128361333,0.0004997501249375312,"[-0.01286885017041438, -0.00750486014241565]",True,reference better
+metr_la,metr_la_stgcn,outputs\metr_la_agstt_predictions.npz,outputs\metr_la_stgcn_predictions.npz,0.0,1890984,-0.16844876552186605,0.0004997501249375312,"[-0.17201642979529003, -0.16494985308973173]",True,reference better
+metr_la,metr_la_linear,outputs\metr_la_agstt_predictions.npz,outputs\metr_la_linear_predictions.npz,0.0,1890984,-0.7320659456936395,0.0004997501249375312,"[-0.7378223238881451, -0.7265976573318188]",True,reference better

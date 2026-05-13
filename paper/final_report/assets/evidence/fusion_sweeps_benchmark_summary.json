@@ -1,0 +1,56 @@
+[
+  {
+    "config": "configs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v3.yaml",
+    "run_name": "pemsd7_agstt_fusion_constrained_v3",
+    "model": "agstt",
+    "mae": 3.550269365310669,
+    "rmse": 6.761472702026367,
+    "mape_percent": 9.324164390563965,
+    "metrics_path": "outputs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v3_metrics.json"
+  },
+  {
+    "config": "configs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v2.yaml",
+    "run_name": "pemsd7_agstt_fusion_constrained_v2",
+    "model": "agstt",
+    "mae": 3.5571298599243164,
+    "rmse": 6.760979175567627,
+    "mape_percent": 9.349685668945312,
+    "metrics_path": "outputs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v2_metrics.json"
+  },
+  {
+    "config": "configs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v1.yaml",
+    "run_name": "pemsd7_agstt_fusion_constrained_v1",
+    "model": "agstt",
+    "mae": 3.5572917461395264,
+    "rmse": 6.763512134552002,
+    "mape_percent": 9.342117309570312,
+    "metrics_path": "outputs\\fusion_sweeps\\pemsd7_agstt_fusion_constrained_v1_metrics.json"
+  },
+  {
+    "config": "configs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v3.yaml",
+    "run_name": "metr_la_agstt_fusion_constrained_v3",
+    "model": "agstt",
+    "mae": 4.279740810394287,
+    "rmse": 8.75130844116211,
+    "mape_percent": 11.662571907043457,
+    "metrics_path": "outputs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v3_metrics.json"
+  },
+  {
+    "config": "configs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v1.yaml",
+    "run_name": "metr_la_agstt_fusion_constrained_v1",
+    "model": "agstt",
+    "mae": 4.283483505249023,
+    "rmse": 8.767502784729004,
+    "mape_percent": 11.6497163772583,
+    "metrics_path": "outputs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v1_metrics.json"
+  },
+  {
+    "config": "configs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v2.yaml",
+    "run_name": "metr_la_agstt_fusion_constrained_v2",
+    "model": "agstt",
+    "mae": 4.285651206970215,
+    "rmse": 8.780484199523926,
+    "mape_percent": 11.627791404724121,
+    "metrics_path": "outputs\\fusion_sweeps\\metr_la_agstt_fusion_constrained_v2_metrics.json"
+  }
+]

@@ -1,0 +1,11 @@
+dataset,dataset_label,config,run_name,model,mae,rmse,mape_percent,metrics_path
+pemsd7_228,PEMSD7-228,configs\pemsd7_dcrnn_baseline.yaml,pemsd7_dcrnn_baseline,dcrnn,3.589770555496216,7.030478477478027,8.992817878723145,outputs\pemsd7_dcrnn_metrics.json
+pemsd7_228,PEMSD7-228,configs\pemsd7_agstt.yaml,pemsd7_agstt_full,agstt,3.600691080093384,6.831973075866699,9.340376853942871,outputs\pemsd7_agstt_metrics.json
+pemsd7_228,PEMSD7-228,configs\pemsd7_lstm_baseline.yaml,pemsd7_lstm_baseline,lstm,3.7109534740448,7.400668144226074,9.246413230895996,outputs\pemsd7_lstm_metrics.json
+pemsd7_228,PEMSD7-228,configs\pemsd7_stgcn_baseline.yaml,pemsd7_stgcn_baseline,stgcn,4.088315010070801,7.385282039642334,11.527727127075195,outputs\pemsd7_stgcn_metrics.json
+pemsd7_228,PEMSD7-228,configs\pemsd7_linear_baseline.yaml,pemsd7_linear_baseline,linear,4.316738605499268,8.167182922363281,11.262711524963379,outputs\pemsd7_linear_metrics.json
+metr_la,METR-LA,configs\metr_la_dcrnn_baseline.yaml,metr_la_dcrnn_baseline,dcrnn,4.333531379699707,8.977103233337402,11.89837646484375,outputs\metr_la_dcrnn_metrics.json
+metr_la,METR-LA,configs\metr_la_agstt.yaml,metr_la_agstt_full,agstt,4.375058174133301,8.824812889099121,12.237902641296387,outputs\metr_la_agstt_metrics.json
+metr_la,METR-LA,configs\metr_la_lstm_baseline.yaml,metr_la_lstm_baseline,lstm,4.385382175445557,8.990320205688477,12.157991409301758,outputs\metr_la_lstm_metrics.json
+metr_la,METR-LA,configs\metr_la_stgcn_baseline.yaml,metr_la_stgcn_baseline,stgcn,4.543506145477295,8.845425605773926,12.619772911071777,outputs\metr_la_stgcn_metrics.json
+metr_la,METR-LA,configs\metr_la_linear_baseline.yaml,metr_la_linear_baseline,linear,5.107123374938965,9.920559883117676,13.665064811706543,outputs\metr_la_linear_metrics.json

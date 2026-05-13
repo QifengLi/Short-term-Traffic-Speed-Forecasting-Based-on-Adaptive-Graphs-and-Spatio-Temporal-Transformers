@@ -1,0 +1,92 @@
+[
+  {
+    "config": "configs\\fair_budget\\pemsd7_agstt_long_budget_fair.yaml",
+    "run_name": "pemsd7_agstt_long_budget_fair",
+    "model": "agstt",
+    "mae": 3.182805299758911,
+    "rmse": 6.218234539031982,
+    "mape_percent": 8.260438919067383,
+    "metrics_path": "outputs\\fair_budget\\pemsd7_agstt_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\pemsd7_dcrnn_long_budget_fair.yaml",
+    "run_name": "pemsd7_dcrnn_long_budget_fair",
+    "model": "dcrnn",
+    "mae": 3.254282236099243,
+    "rmse": 6.464784622192383,
+    "mape_percent": 8.306073188781738,
+    "metrics_path": "outputs\\fair_budget\\pemsd7_dcrnn_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\pemsd7_lstm_long_budget_fair.yaml",
+    "run_name": "pemsd7_lstm_long_budget_fair",
+    "model": "lstm",
+    "mae": 3.3994827270507812,
+    "rmse": 6.911734104156494,
+    "mape_percent": 8.654446601867676,
+    "metrics_path": "outputs\\fair_budget\\pemsd7_lstm_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\pemsd7_stgcn_long_budget_fair.yaml",
+    "run_name": "pemsd7_stgcn_long_budget_fair",
+    "model": "stgcn",
+    "mae": 3.465765953063965,
+    "rmse": 6.651669502258301,
+    "mape_percent": 9.029845237731934,
+    "metrics_path": "outputs\\fair_budget\\pemsd7_stgcn_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\pemsd7_linear_long_budget_fair.yaml",
+    "run_name": "pemsd7_linear_long_budget_fair",
+    "model": "linear",
+    "mae": 3.661048412322998,
+    "rmse": 7.25381326675415,
+    "mape_percent": 9.40962028503418,
+    "metrics_path": "outputs\\fair_budget\\pemsd7_linear_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\metr_la_agstt_long_budget_fair.yaml",
+    "run_name": "metr_la_agstt_long_budget_fair",
+    "model": "agstt",
+    "mae": 3.791370391845703,
+    "rmse": 8.289145469665527,
+    "mape_percent": 9.980010032653809,
+    "metrics_path": "outputs\\fair_budget\\metr_la_agstt_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\metr_la_stgcn_long_budget_fair.yaml",
+    "run_name": "metr_la_stgcn_long_budget_fair",
+    "model": "stgcn",
+    "mae": 3.8832435607910156,
+    "rmse": 8.318571090698242,
+    "mape_percent": 10.245216369628906,
+    "metrics_path": "outputs\\fair_budget\\metr_la_stgcn_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\metr_la_dcrnn_long_budget_fair.yaml",
+    "run_name": "metr_la_dcrnn_long_budget_fair",
+    "model": "dcrnn",
+    "mae": 3.892084836959839,
+    "rmse": 8.329840660095215,
+    "mape_percent": 9.96667766571045,
+    "metrics_path": "outputs\\fair_budget\\metr_la_dcrnn_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\metr_la_lstm_long_budget_fair.yaml",
+    "run_name": "metr_la_lstm_long_budget_fair",
+    "model": "lstm",
+    "mae": 3.9286510944366455,
+    "rmse": 8.481534957885742,
+    "mape_percent": 10.115926742553711,
+    "metrics_path": "outputs\\fair_budget\\metr_la_lstm_long_budget_fair_metrics.json"
+  },
+  {
+    "config": "configs\\fair_budget\\metr_la_linear_long_budget_fair.yaml",
+    "run_name": "metr_la_linear_long_budget_fair",
+    "model": "linear",
+    "mae": 4.2371039390563965,
+    "rmse": 8.861954689025879,
+    "mape_percent": 10.486452102661133,
+    "metrics_path": "outputs\\fair_budget\\metr_la_linear_long_budget_fair_metrics.json"
+  }
+]

@@ -1,0 +1,3 @@
+dataset,dataset_label,selected_node,agstt_node_mae,dcrnn_node_mae,gap_agstt_minus_dcrnn
+pemsd7_228,PEMSD7-228,211,4.5717690428908995,3.5849174593581634,0.986851583532736
+metr_la,METR-LA,163,9.930891488352392,9.46623915056897,0.46465233778342174
