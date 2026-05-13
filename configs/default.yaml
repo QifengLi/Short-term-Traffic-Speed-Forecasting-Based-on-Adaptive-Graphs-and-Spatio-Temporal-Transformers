@@ -1,0 +1,43 @@
+dataset:
+  name: demo
+  data_path: data/demo.npz
+  adj_path: data/demo_adj.npy
+  key: data
+  seq_len: 12
+  pred_len: 12
+  feature_idx: 0
+  train_ratio: 0.7
+  val_ratio: 0.1
+  num_workers: 0
+
+experiment:
+  name: agstt_full
+
+model:
+  name: agstt
+  d_model: 64
+  ff_hidden: 128
+  num_heads: 4
+  num_layers: 3
+  dropout: 0.1
+  gcn_order: 2
+  use_static_graph: true
+  use_adaptive_graph: true
+  use_dynamic_graph: true
+
+training:
+  seed: 42
+  batch_size: 32
+  epochs: 20
+  lr: 0.001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  device: auto
+  log_interval: 50
+  checkpoint_dir: checkpoints
+
+output:
+  save_predictions: true
+  prediction_path: outputs/demo_agstt_predictions.npz
+  save_metrics: true
+  metrics_path: outputs/demo_agstt_metrics.json

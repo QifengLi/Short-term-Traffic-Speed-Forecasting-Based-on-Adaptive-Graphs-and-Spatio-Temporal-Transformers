@@ -1,0 +1,35 @@
+dataset:
+  name: pemsd7_228
+  data_path: data/pemsd7_228.npz
+  adj_path: data/pemsd7_228_adj.npy
+  key: data
+  seq_len: 12
+  pred_len: 12
+  feature_idx: 0
+  train_ratio: 0.6
+  val_ratio: 0.2
+  num_workers: 0
+  max_timesteps: 4032
+  null_val: null
+  strict_adj_check: true
+experiment:
+  name: pemsd7_dcrnn_baseline_seed7
+model:
+  name: dcrnn
+  hidden_dim: 64
+  use_static_graph: true
+training:
+  seed: 7
+  batch_size: 32
+  epochs: 6
+  lr: 0.001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  device: auto
+  log_interval: 100
+  checkpoint_dir: checkpoints
+output:
+  save_predictions: true
+  prediction_path: outputs/robustness/pemsd7_228_pemsd7_dcrnn_baseline_seed7_predictions.npz
+  save_metrics: true
+  metrics_path: outputs/robustness/pemsd7_228_pemsd7_dcrnn_baseline_seed7_metrics.json
