@@ -5,7 +5,7 @@ __pycache__/
 .vscode/
 
 # Large local artefacts
-data/
+/data/
 checkpoints/
 outputs/**/*.npz
 outputs/**/*.pt
@@ -15,4 +15,3 @@ outputs/**/*.ckpt
 # Temporary Office files
 ~$*
 *.tmp
-
